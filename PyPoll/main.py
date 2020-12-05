@@ -51,7 +51,7 @@ for i in vote_counts:
 #Find the inverse of the total vote counts to find the winner
 inverse = [(value,key) for key,value in vote_counts.items()]
 Winner = max(inverse)[1]
-#print(Winner)
+
 
 #Setting variables for results list  
 First_candidate = list(vote_counts.keys())[0]
@@ -64,36 +64,29 @@ Second_candidate_votes=list(vote_counts.values())[1]
 Third_candidate_votes=list(vote_counts.values())[2]
 Fourth_candidate_votes=list(vote_counts.values())[3]       
 
-first_percent = list(vote_ratio.values())[0]
-second_percent = list(vote_ratio.values())[1]
-third_percent = list(vote_ratio.values())[2]
-fourth_percent = list(vote_ratio.values())[3]
+first_percent = (list(vote_ratio.values())[0]) * 100
+second_percent = (list(vote_ratio.values())[1]) * 100
+third_percent = (list(vote_ratio.values())[2]) * 100
+fourth_percent = (list(vote_ratio.values())[3]) * 100
+
+
+
+#save output to be able to print and export to text file
+Output = (
+"Election Results\n"
+"---------------------\n"
+f"Total Votes: {total_vote_count}\n"
+"---------------------\n"
+f"{First_candidate} : {first_percent:.2f}% ({First_candidate_votes})\n"
+f"{Second_candidate} : {second_percent:.2f}% ({Second_candidate_votes})\n"
+f"{Third_candidate} : {third_percent:.2f}% ({Third_candidate_votes})\n"
+f"{Fourth_candidate} : {fourth_percent:.2f}% ({Fourth_candidate_votes})\n"
+"---------------------\n"
+f"Winner:  {Winner}")
 
 #Print election results 
-print("Election Results")
-print("---------------------")
-print("Total Votes: " + str(total_vote_count))
-print("---------------------")
-print(str(First_candidate) + " : {:.2%}" .format(first_percent) + " (" + str(First_candidate_votes) + ")") 
-print(str(Second_candidate) + " : {:.2%}" .format(second_percent) + " (" + str(Second_candidate_votes) + ")")
-print(str(Third_candidate) + " : {:.2%}" .format(third_percent) + " (" + str(Third_candidate_votes) + ")")
-print(str(Fourth_candidate) + " : {:.2%}" .format(fourth_percent) + " (" + str(Fourth_candidate_votes) + ")")
-print("---------------------")
-print("Winner: " + str(Winner))
-#save output to be able to print and export to text file
+print(Output)
 
-
-# Output = (
-# "Election Results\n"
-# "---------------------\n"
-# f"Total Votes: {total_vote_count}\n"
-# "---------------------\n"
-#(str(First_candidate) + " : {:.2%}" .format(first_percent) + " (" + str(First_candidate_votes) + ")"))
-#f"{First_candidate}:  {:.2%}" .format(second_percent) \n" )
-#f"{First_candidate} : {{:.2%}" .format(first_percent)}  ( {First_candidate_votes} ) \n" )
-# print(str(Second_candidate) + " : {:.2%}" .format(second_percent) + " (" + str(Second_candidate_votes) + ")")
-# print(str(Third_candidate) + " : {:.2%}" .format(third_percent) + " (" + str(Third_candidate_votes) + ")")
-# print(str(Fourth_candidate) + " : {:.2%}" .format(fourth_percent) + " (" + str(Fourth_candidate_votes) + ")")) 
-#print(Output)
-
-#f"Greatest increase in profit: {Month_change_list[index1 +1]} : {Greatest_profit}\n"
+#Export to text file 
+with open(Election_results_output, "w") as txt_file: 
+    txt_file.write(Output)
