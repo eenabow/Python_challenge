@@ -76,9 +76,9 @@ Output = (
 f"Total Votes: {total_vote_count}\n"
 "---------------------\n"
 f"{First_candidate} : {first_percent:.0f}% ({First_candidate_votes})\n"
-f"{Second_candidate} : {second_percent:.2f}% ({Second_candidate_votes})\n"
-f"{Third_candidate} : {third_percent:.2f}% ({Third_candidate_votes})\n"
-f"{Fourth_candidate} : {fourth_percent:.2f}% ({Fourth_candidate_votes})\n"
+f"{Second_candidate} : {second_percent:.0f}% ({Second_candidate_votes})\n"
+f"{Third_candidate} : {third_percent:.0f}% ({Third_candidate_votes})\n"
+f"{Fourth_candidate} : {fourth_percent:.0f}% ({Fourth_candidate_votes})\n"
 "---------------------\n"
 f"Winner:  {Winner}")
 
