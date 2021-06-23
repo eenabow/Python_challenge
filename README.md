@@ -7,7 +7,7 @@ Includes:
 
 Assignment: 
 
-** PyBank ** 
+**PyBank** 
   * The total number of months included in the dataset
   * The net total amount of "Profit/Losses" over the entire period
   * Calculate the changes in "Profit/Losses" over the entire period, then find the average of those changes
@@ -15,7 +15,7 @@ Assignment:
   * The greatest decrease in losses (date and amount) over the entire period
   * In addition, your final script should both print the analysis to the terminal and export a text file with the results.
 
-** PyPoll **
+**PyPoll**
   * The total number of votes cast
   * A complete list of candidates who received votes
   * The percentage of votes each candidate won
@@ -23,7 +23,7 @@ Assignment:
   * The winner of the election based on popular vote.
    * In addition, your final script should both print the analysis to the terminal and export a text file with the results.
    
-Challenges: 
+**Challenges:**
   * Expressing keys, values, and manipulating items in lists and dictionaries
   * Formatting different types using f strings 
   * Simplifying code and trying to find workarounds to hardcoding
