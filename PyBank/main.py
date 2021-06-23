@@ -60,7 +60,7 @@ Output = (
 "---------------------\n"
 f"Total Months: {Total_Months}\n"
 f"Change over Period: {Total_Net}\n"
-f"Average Change: {Average_change}\n"
+f"Average Change: {Average_change:.2f}\n"
 f"Greatest increase in profit: {Month_change_list[index1 +1]} : {Greatest_profit}\n"
 f"Greatest decrease in profit: {Month_change_list[index2 +1]} : {Greatest_loss}")
 
